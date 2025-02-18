@@ -49,7 +49,12 @@
 
   # see :help nixCats.flake.outputs
   outputs =
-    { self, nixpkgs, ... }@inputs:
+    {
+      self,
+      nixd,
+      nixpkgs,
+      ...
+    }@inputs:
     let
       inherit (inputs.nixCats) utils;
       luaPath = "${./.}";
@@ -143,8 +148,8 @@
             ];
             neonixdev = {
               # also you can do this.
-              inherit (inputs) nixd;
               inherit (pkgs) nix-doc lua-language-server;
+              inherit (inputs.nixd.packages.${pkgs.system}) nixd;
               # and each will be its own sub category
             };
           };
