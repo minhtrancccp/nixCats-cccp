@@ -2,7 +2,6 @@
 
 ## in progress
 
-- [ ] lazygit.nvim
 - [ ] nixd
 
 ## todo
@@ -10,3 +9,5 @@
 - [ ] js/react
 
 ## done ✓
+
+- [x] lazygit.nvim
