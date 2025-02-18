@@ -10,4 +10,4 @@
 
 ## done ✓
 
-- [x] lazygit.nvim
+- [x] lazygit-nvim
