@@ -22,9 +22,6 @@
   description = "A Lua-natic's neovim flake, with extra cats! nixCats! And flairs from minhtrancccp as well!";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    nixCats.url = "github:BirdeeHub/nixCats-nvim";
-
     # see :help nixCats.flake.inputs
     # If you want your plugin to be loaded by the standard overlay,
     # i.e. if it wasnt on nixpkgs, but doesnt have an extra build step.
@@ -45,6 +42,9 @@
     # };
 
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+    nixCats.url = "github:BirdeeHub/nixCats-nvim";
+    nixd.url = "github:nix-community/nixd";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
   };
 
   # see :help nixCats.flake.outputs
@@ -143,7 +143,8 @@
             ];
             neonixdev = {
               # also you can do this.
-              inherit (pkgs) nix-doc lua-language-server nixd;
+              inherit (inputs) nixd;
+              inherit (pkgs) nix-doc lua-language-server;
               # and each will be its own sub category
             };
           };
