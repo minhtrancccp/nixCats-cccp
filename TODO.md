@@ -15,6 +15,7 @@
     - https://github.com/BirdeeHub/nixCats-nvim/tree/54e2cc42dbefb9e152d9584794f5d8d94a20a534/templates/example
 - [ ] lazyvim
     - https://github.com/LazyVim/starter
+- [ ] REORG
 
 ## done ✓
 
